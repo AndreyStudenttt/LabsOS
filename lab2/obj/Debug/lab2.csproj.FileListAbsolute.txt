@@ -1,0 +1,11 @@
+C:\Projects\labsOS\lab2\bin\Debug\lab2.exe.config
+C:\Projects\labsOS\lab2\bin\Debug\lab2.exe
+C:\Projects\labsOS\lab2\bin\Debug\lab2.pdb
+C:\Projects\labsOS\lab2\obj\Debug\lab2.csproj.AssemblyReference.cache
+C:\Projects\labsOS\lab2\obj\Debug\lab2.csproj.SuggestedBindingRedirects.cache
+C:\Projects\labsOS\lab2\obj\Debug\lab2.Form1.resources
+C:\Projects\labsOS\lab2\obj\Debug\lab2.Properties.Resources.resources
+C:\Projects\labsOS\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
+C:\Projects\labsOS\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+C:\Projects\labsOS\lab2\obj\Debug\lab2.exe
+C:\Projects\labsOS\lab2\obj\Debug\lab2.pdb
