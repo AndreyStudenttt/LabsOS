@@ -17,6 +17,7 @@ namespace lab2
         public Form1()
         {
             InitializeComponent();
+           // System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
         }
         public byte[] bytearr { get; set; }
         string filename;
@@ -61,21 +62,30 @@ namespace lab2
         {
             File.WriteAllBytes(filenameend, bytearr);
         }
-
+        EventWaitHandle handle = new AutoResetEvent(false);
         private void buttonCopThread_Click(object sender, EventArgs e)
         {
+            buttonCopThread.Enabled = false;
             Thread copy = new Thread(CopyThread);
             copy.Start();
+           
+          handle.WaitOne();
+            buttonCopThread.Enabled = true;
         }
+
         public void CopyThread ()
         {
-            progressBar1.Value = 0;
-            for (int i = 0; i < 10 ; i++)
+
+            progressBar1.Invoke((MethodInvoker)(() => progressBar1.Value = 0));
+            for (int i = 0; i < 4; i++)
             {
                 Thread.Sleep(500);
-                progressBar1.Value++;
+                progressBar1.Invoke((MethodInvoker)(() => progressBar1.Value++));
+
             }
-            File.WriteAllBytes(filenameend, bytearr);
+            //Thread.Sleep(500);
+            //File.WriteAllBytes(filenameend, bytearr);
+            handle.Set();
         }
     }
 }
